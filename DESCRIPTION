@@ -8,7 +8,7 @@ Authors@R: c(
 Description: Provides an implementation of incorporating parallelization using 'OpenMP'
     with 'Rcpp'.
 BugReports: https://github.com/r-pkg-examples/rcpp-and-openmp
-Depends: R (>= 3.5.0)
+Depends: R (>= 3.4.0)
 LinkingTo: 
     Rcpp
 Imports: 
