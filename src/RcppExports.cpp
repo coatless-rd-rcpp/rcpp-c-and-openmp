@@ -5,9 +5,14 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // multiply_by_two
 void multiply_by_two(Rcpp::NumericVector x, int n);
-RcppExport SEXP _RcppOpenMP_multiply_by_two(SEXP xSEXP, SEXP nSEXP) {
+RcppExport SEXP _RcppCandOpenMP_multiply_by_two(SEXP xSEXP, SEXP nSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< Rcpp::NumericVector >::type x(xSEXP);
@@ -18,11 +23,11 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_RcppOpenMP_multiply_by_two", (DL_FUNC) &_RcppOpenMP_multiply_by_two, 2},
+    {"_RcppCandOpenMP_multiply_by_two", (DL_FUNC) &_RcppCandOpenMP_multiply_by_two, 2},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_RcppOpenMP(DllInfo *dll) {
+RcppExport void R_init_RcppCandOpenMP(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }

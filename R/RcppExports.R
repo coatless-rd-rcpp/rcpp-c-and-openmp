@@ -21,6 +21,6 @@
 #' multiply_by_two(x, n = ncores)
 #' @export
 multiply_by_two <- function(x, n) {
-    invisible(.Call(`_RcppOpenMP_multiply_by_two`, x, n))
+    invisible(.Call(`_RcppCandOpenMP_multiply_by_two`, x, n))
 }
 

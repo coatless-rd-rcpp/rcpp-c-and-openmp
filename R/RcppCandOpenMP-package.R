@@ -1,4 +1,4 @@
-#' @useDynLib RcppOpenMP, .registration = TRUE
+#' @useDynLib RcppCandOpenMP, .registration = TRUE
 #' @importFrom Rcpp sourceCpp
 #' 
 #' @details 

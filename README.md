@@ -1,23 +1,25 @@
 ## Using C Routines inside of Rcpp
 
-[![Travis-CI Build Status](https://travis-ci.org/r-pkg-examples/rcpp-and-openmp.svg?branch=master)](https://travis-ci.org/r-pkg-examples/rcpp-and-openmp)
-
-The `RcppOpenMP` _R_ package provides an example of implementing and using a
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/coatless-rd-rcpp/rcpp-c-and-openmp/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/coatless-rd-rcpp/rcpp-c-and-openmp/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+  
+The `RcppCandOpenMP` _R_ package provides an example of implementing and using a
 _C_ routine with _C++_ code through _Rcpp_.
 
 ### Installation
 
-To install the `RcppOpenMP` package, use:
+To install the `RcppCandOpenMP` package, use:
 
 ```r
-if(!requireNamespace("devtools")) install.packages("devtools")
-devtools::install_github("r-pkg-examples/rcpp-and-openmp")
+if(!requireNamespace("remotes")) install.packages("remotes")
+remotes::install_github("coatless-rd-rcpp/rcpp-and-openmp")
 ```
 
 To access its contents, load it into _R_ with:
 
 ```r
-library("RcppOpenMP")
+library("RcppCandOpenMP")
 ```
 
 ### Implementation Details

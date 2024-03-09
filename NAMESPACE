@@ -2,4 +2,4 @@
 
 export(multiply_by_two)
 importFrom(Rcpp,sourceCpp)
-useDynLib(RcppOpenMP, .registration = TRUE)
+useDynLib(RcppCandOpenMP, .registration = TRUE)
