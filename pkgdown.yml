@@ -1,0 +1,9 @@
+pandoc: 3.1.11
+pkgdown: 2.0.7
+pkgdown_sha: ~
+articles: {}
+last_built: 2024-03-09T08:55Z
+urls:
+  reference: https://rd-rcpp.thecoatlessprofessor.com/rcpp-c-and-openmp/reference
+  article: https://rd-rcpp.thecoatlessprofessor.com/rcpp-c-and-openmp/articles
+
