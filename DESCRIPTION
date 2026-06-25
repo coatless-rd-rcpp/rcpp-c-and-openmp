@@ -13,7 +13,7 @@ Depends: R (>= 4.3.0)
 LinkingTo: 
     Rcpp
 Imports: 
-    Rcpp (>= 1.0.12)
+    Rcpp (>= 1.1.1)
 License: GPL (>= 2)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
