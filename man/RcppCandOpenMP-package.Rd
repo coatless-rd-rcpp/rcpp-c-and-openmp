@@ -25,4 +25,9 @@ Useful links:
 \author{
 \strong{Maintainer}: James Balamuta \email{balamut2@illinois.edu}
 
+Authors:
+\itemize{
+  \item James Balamuta \email{balamut2@illinois.edu}
+}
+
 }
