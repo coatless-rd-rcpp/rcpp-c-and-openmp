@@ -101,14 +101,14 @@ PKG_LIBS = $(SHLIB_OPENMP_CXXFLAGS)
 ```
 
 Because the parallel `#pragma` lives in a `.c` file, the *OpenMP* flag
-has to reach the *C* compiler – that is what
+has to reach the *C* compiler, which is what
 `PKG_CFLAGS = $(SHLIB_OPENMP_CFLAGS)` ensures. Setting only
 `PKG_CXXFLAGS` (the *C++* flag) would leave `my_c_parallel_func.c`
 compiled without *OpenMP*, so the `#pragma` would be ignored and the
 loop would run serially. `PKG_LIBS` links the *OpenMP* runtime; using
 `$(SHLIB_OPENMP_CXXFLAGS)` there is appropriate because the shared
-object is linked with the *C++* driver. Using these variables – rather
-than literal flags – is the portable, CRAN-friendly way to request
+object is linked with the *C++* driver. Using these variables, rather
+than literal flags, is the portable, CRAN-friendly way to request
 *OpenMP*.
 
 ### Surfacing the Routine with *Rcpp*
@@ -119,7 +119,7 @@ The bridge to *R* lives in `src/surface_c_fun_with_rcpp.cpp`. Because
 The exported
 [`multiply_by_two()`](https://rd-rcpp.thecoatlessprofessor.com/rcpp-c-and-openmp/reference/multiply_by_two.md)
 function passes the raw `double*` buffer underlying the
-`Rcpp::NumericVector` – obtained with `x.begin()` – straight to the *C*
+`Rcpp::NumericVector` (obtained with `x.begin()`) straight to the *C*
 routine, together with the element count `n`. The `// [[Rcpp::export]]`
 attribute generates the *R*-level binding.
 
