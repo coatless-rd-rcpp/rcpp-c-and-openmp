@@ -2,27 +2,27 @@
 % Please edit documentation in R/RcppExports.R
 \name{multiply_by_two}
 \alias{multiply_by_two}
-\title{Multiple a Value By 2}
+\title{Multiply a Vector by Two}
 \usage{
 multiply_by_two(x, n)
 }
 \arguments{
-\item{x}{A \code{vector} of numeric values to multiple.}
+\item{x}{A \code{numeric} vector of values to multiply.}
 
-\item{n}{The number of cores to use.}
+\item{n}{The number of elements of \code{x} to process.}
 }
 \description{
-Computes the multiplication of 2 by passing the data into a \emph{C} routine
-that is parallelized
+Doubles each element of a numeric vector by passing the data into a
+parallelized \emph{C} routine.
 }
 \examples{
 
 # Data
 x = 1:5
 
-# Number of Cores to use in Parallelization
-ncores = 2
+# Process all elements of x
+n = length(x)
 
 # Call the routine
-multiply_by_two(x, n = ncores)
+multiply_by_two(x, n = n)
 }
