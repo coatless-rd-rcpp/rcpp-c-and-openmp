@@ -5,7 +5,7 @@
 <!-- badges: end -->
   
 The `RcppCandOpenMP` _R_ package provides an example of parallelizing a _C_
-routine with [_OpenMP_](https://www.openmp.org/) and surfacing it in _R_
+routine with [_OpenMP_][openmp] and surfacing it in _R_
 through _C++_ code with _Rcpp_.
 
 ### Usage
@@ -13,9 +13,9 @@ through _C++_ code with _Rcpp_.
 To install the package, you must first have a compiler on your system that is
 compatible with R and that supports _OpenMP_. For help on obtaining a compiler
 consult either
-[macOS](http://thecoatlessprofessor.com/programming/r-compiler-tools-for-rcpp-on-os-x/)
+[macOS][compiler-macos]
 or
-[Windows](http://thecoatlessprofessor.com/programming/rcpp/install-rtools-for-rcpp/)
+[Windows][compiler-windows]
 guides.
 
 With a compiler in hand, one can then install the package from GitHub by:
@@ -150,3 +150,7 @@ multiply_by_two(x, n = n)
 ## License
 
 GPL (\>= 2)
+
+[compiler-macos]: http://thecoatlessprofessor.com/programming/r-compiler-tools-for-rcpp-on-os-x/
+[compiler-windows]: http://thecoatlessprofessor.com/programming/rcpp/install-rtools-for-rcpp/
+[openmp]: https://www.openmp.org/
